@@ -1,0 +1,160 @@
+$gray: #666564;
+$dark-red: #8A3030;
+$light-gray: #E6E0DC;
+
+main{
+  margin-top: 80px;
+  margin-bottom:50px;
+}
+
+header{
+   position:fixed;
+   top:0px;
+   width:100%;
+   z-index:20;
+  nav{ 
+    min-height:60px;
+    background:$dark-red;
+    >ul{
+      display: inline-block;
+    }
+    ul:first-of-type>li{
+      border-right:2px solid $light-gray;
+    }
+    ul:last-of-type{
+      float:right;
+    }
+    >ul>li{
+      padding:10px 20px;
+      margin:10px 0px;
+      display: inline-block;
+      color:$light-gray;
+    }
+    li:hover{
+      background-color:#f1f1f1;
+      color:$dark-red;
+      a{
+        color:$dark-red;
+      }
+    }
+    a{
+      color:$light-gray;
+      font-weight:bold;
+      &:hover{
+        text-decoration:none;
+        color:$dark-red;
+      }
+      &:visited{
+        color:$light-gray;
+        text-decoration:none;
+      }
+    }
+    #title{
+      font-size:20px;
+    }
+    .submenu{
+      display:none;
+      height:auto;
+      position:absolute;
+      margin-top:20px;
+      padding-left: 20px;
+      padding-bottom:20px;
+      background:$dark-red;
+      width:170px;
+      z-index:200;
+      li{
+        padding-top:10px;
+        border-bottom: 2px solid #F0BF95;
+      }
+    }
+    .submenu-item:hover{ 
+      .submenu{
+        display:block;
+        a{
+          color:#F0BF95;
+        }
+      }
+    }
+  }
+}
+
+footer{
+  min-height:170px;
+  color:$gray;
+  position:absolute;
+  bottom:0px;
+  input[type='text']{
+    color:black;
+  }
+  input[type='submit']{
+    background:$dark-red;
+    color:$light-gray;
+    border-radius:5px;
+  }
+  .col-50{
+    padding-left:100px;
+  }
+  h3{
+    color:$dark-red;
+    font-weight:bold;
+    font-size:20px;
+    margin-bottom:10px;
+  }
+  a{
+    color:$gray;
+    text-decoration: none;
+  }
+}
+
+.carousel-inner{
+  height: 400px; 
+  width:100%;
+  .item img{
+  min-height: 400px; 
+  }
+}
+
+.left-menu{
+  position:fixed;
+  height:90%;
+  top:80px;
+  margin-left:20px;
+  overflow:hidden;
+  &:hover{
+    overflow:auto;
+  }
+  a{
+    color:$dark-red;
+  }
+  h3{
+    color:$dark-red;
+    font-weight:bold;
+    font-size:20px;
+  }
+  nav{
+    margin-top:30px;
+    ul:first-of-type{
+      margin-bottom:30px;
+      li:hover{
+        background-color:$dark-red;
+        a{
+          color:$light-gray;
+        }
+      }
+    }
+  }
+  input{
+    width:60%;
+    margin-top:40px;
+  }
+  button{
+    background:$dark-red;
+    color:$light-gray;
+    border-radius:5px;
+    width:30%;
+  }
+  .submenu{
+    padding-left: 20px;  
+  }
+}
+
