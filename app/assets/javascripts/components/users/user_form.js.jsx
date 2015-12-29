@@ -46,8 +46,8 @@ var UserForm = React.createClass({
 
      <p>
        <input id='password'
-       ref="password_digest"
-       value={this.state.password_digest}
+       ref="password"
+       value={this.state.password}
        onChange={this.handlePasswordChange}
        type="password"
        required

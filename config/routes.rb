@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   root 'application#index'
   resources :users
+  resources :tasks
   get 'current_user' => 'application#current_user'
   get '/login'  => 'sessions#new'
   post '/login' => 'sessions#create'

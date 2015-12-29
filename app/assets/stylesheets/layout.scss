@@ -18,6 +18,11 @@ header{
     >ul{
       display: inline-block;
     }
+    input{
+      background:$dark-red;
+      &:hover{
+        background:#f1f1f1;      }
+    }
     ul:first-of-type>li{
       border-right:2px solid $light-gray;
     }

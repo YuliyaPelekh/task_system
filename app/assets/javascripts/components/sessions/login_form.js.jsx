@@ -21,8 +21,7 @@ var LoginForm = React.createClass({
     <form className="userForm" onSubmit={this.handleSubmit}>
 
      <p>
-       <input id="email" 
-       ref="email"
+       <input ref="email"
        value={this.state.email}
        onChange={this.handleEmailChange}
        type="email"
@@ -32,9 +31,8 @@ var LoginForm = React.createClass({
      </p>
 
      <p>
-       <input id='password'
-       ref="password_digest"
-       value={this.state.password_digest}
+       <input ref="password"
+       value={this.state.password}
        onChange={this.handlePasswordChange}
        type="password"
        required
