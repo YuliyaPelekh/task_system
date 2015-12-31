@@ -9,6 +9,8 @@ var DefaultRoute = ReactRouter.DefaultRoute;
     <Route path='/signup' name='signup' handler={NewUser} />
     <Route path='/login' name='login' handler={Login} />
     <Route path='/users' name='users' handler={Users} />
-    <Route path='/users/:userId/new' name='new_task' handler={NewTask} />
+    <Route path='/users/:userId' name='user' handler={UserShow} />
+    <Route path='/tasks/new' name='new_task' handler={NewTask} />
+    <Route path='/tasks/:taskId/edit' name='edit_task' handler={EditTask} />
    </Route>
  );

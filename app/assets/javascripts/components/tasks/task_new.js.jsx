@@ -6,10 +6,10 @@ var NewTask = React.createClass({
       url: 'tasks.json',
       dataType: 'json',
       type: 'POST',
-      data: {task: task},
+      data: {task: task}, 
       success: function(data) {
         this.setState({data: data});
-        this.transitionTo("/");
+        this.transitionTo("users");
       }.bind(this),
       error: function(xhr, status, err) {
         console.error('tasks.json', status, err.toString());
@@ -19,10 +19,11 @@ var NewTask = React.createClass({
 
   render: function() {
     return (
-      <div>
+      <div className='form-wrapper'>
         <h1>Please create a new task</h1>
-        <UserForm onTaskSubmit={this.handleTaskSubmit} />
+        <TaskForm onTaskSubmit={this.handleTaskSubmit}/>
       </div>
     );
   }
 });
+

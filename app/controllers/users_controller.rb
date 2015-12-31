@@ -5,7 +5,9 @@ class UsersController < ApplicationController
   end
 
   def show
-    render json: User.find(params[:id])
+    @user = User.find(params[:id])
+    @tasks = @user.tasks
+    render json: @tasks
   end
 
   def new

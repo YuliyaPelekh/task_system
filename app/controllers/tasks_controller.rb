@@ -24,6 +24,7 @@ class TasksController < ApplicationController
   end
 
   def edit
+    render json: @task
   end
 
   def update

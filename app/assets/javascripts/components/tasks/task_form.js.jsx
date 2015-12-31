@@ -1,7 +1,9 @@
 var TaskForm = React.createClass({
+
   getInitialState: function() {
     return {user_id: '', name: '', deadline: '', priority: ''};
   },
+
   handleUserIdChange: function(e) {
     this.setState({user_id: e.target.value});
   },
@@ -17,24 +19,29 @@ var TaskForm = React.createClass({
 
   handleSubmit: function(e) {
     e.preventDefault();
-    var user_id = this.state.user_id;
+    var user_id = this.state.user_id.trim();
     var name = this.state.name.trim();
     var deadline = this.state.deadline.trim();
     var priority = this.state.priority.trim();
     this.props.onTaskSubmit({user_id: user_id, name: name, deadline: deadline, priority: priority});
     this.setState({user_id: '', name: '', deadline: '', priority: ''});
   },
-  render: function() {
-   return (
-    <form className="userForm" onSubmit={this.handleSubmit}>
 
-      <p>
-       <input id='user_id'
+  render: function() {
+    
+   return (
+    <form onSubmit={this.handleSubmit}>
+
+     <select id='task_user'
        ref="user_id"
        value={this.state.user_id}
-       onChange={this.handleUserIdChange}
-       type="hidden"/>
-     </p>
+       onChange={this.handleUserIdChange}>
+          <option disabled>Select user</option>
+          <option value='5'>Yuliya Pelekh</option>
+          <option value='7'>Ivan Petrenko</option>
+          <option value='8'>Petro Ivanov</option>
+          <option value='9'>Vasyl Vasylchenko</option>
+     </select>
 
      <p>
        <input id="task_name" 
@@ -62,15 +69,13 @@ var TaskForm = React.createClass({
        value={this.state.priority}
        onChange={this.handlePriorityChange}>
           <option disabled>Select priority</option>
-          <option selected value='low'>low</option>
+          <option value='low'>low</option>
           <option value='middle'>middle</option>
           <option value='high'>high</option>
         </select>
-
       </p>
-
+  
     <input type="submit" value="Submit" />
-
   </form>
   );
  }

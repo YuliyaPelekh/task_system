@@ -19,7 +19,7 @@ var NewUser = React.createClass({
 
   render: function() {
     return (
-      <div>
+      <div className='form-wrapper'>
         <h1>Please register</h1>
         <UserForm onUserSubmit={this.handleUserSubmit} />
       </div>

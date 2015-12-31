@@ -70,12 +70,12 @@ var Navbar = React.createClass({
         <ul>
           <li><a href='/' id='title'>Task Management App</a></li>
           <li><Link to='/'>Home</Link></li>
-          <li className='submenu-item'><Link to='/users'>Your Tasks
-            <span className="caret"></span></Link>
-              <ul className="submenu">
-                <li><a href="#">Task 1-1</a></li>
-                <li><a href="#">Task 1-2</a></li>
-                <li><a href="#">Task 1-3</a></li>
+          <li className='submenu-item toggle'><a>Tasks
+            <span className="caret"></span></a>
+              <ul className="submenu submenu-toggle">
+                <li><Link to="users">All tasks</Link></li>
+                <li><Link to='new_task'>New task</Link></li>
+                <li><a href="#">View tasks</a></li>
               </ul>
           </li>
           <li><a href="#">Gallery</a></li>

@@ -18,7 +18,7 @@ var LoginForm = React.createClass({
   },
   render: function() {
    return (
-    <form className="userForm" onSubmit={this.handleSubmit}>
+    <form onSubmit={this.handleSubmit}>
 
      <p>
        <input ref="email"

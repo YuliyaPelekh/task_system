@@ -19,7 +19,7 @@ var Login = React.createClass({
 
   render: function() {
     return (
-      <div>
+      <div className='form-wrapper'>
         <h1>Please login</h1>
         <LoginForm onUserSubmit={this.handleUserSubmit} />
       </div>

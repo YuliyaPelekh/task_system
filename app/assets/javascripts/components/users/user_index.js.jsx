@@ -26,33 +26,23 @@ var Users = React.createClass({
       }.bind(this)
     });
   },
-  
+
   render: function() {
     var users = this.state.data.map(function(user) {
       return ( 
-        <tbody>
-          <tr key={user.id} >
-            <td>{user.name}</td>
-            <td>{user.email}</td>
-            <td><Link to="users_tasks" params={{userId: user.id}}>User has {user.tasks.length} tasks </Link></td>
-          </tr>
-        </tbody>     
+      <div>
+       <h2>{user.name} {user.email}</h2>   
+       <UserShow id={user.id}/>
+      </div>  
       );
     });
 
     return (
       <div className='users-wrapper'>
-        <h2> List of users </h2>
-        <table> 
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Email</th>
-              <th colSpan="4"></th>
-            </tr>
-          </thead>
+        <h1>All users tasks</h1>
           {users}
-        </table>
+     <Link to='new_task' className='create-button'>
+          Create new task </Link>
       </div>
     )
   }
