@@ -40,7 +40,6 @@ var NewTask = React.createClass({
       }.bind(this),
       error: function(xhr, status, err) {
         console.error('tasks.json', status, err.toString());
-        this.transitionTo("users");
       }.bind(this)
     });
   },

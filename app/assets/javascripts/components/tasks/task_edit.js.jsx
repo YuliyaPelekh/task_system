@@ -1,7 +1,7 @@
 var EditTask = React.createClass({
   mixins: [ReactRouter.Navigation],
 
-    getInitialState: function() {
+  getInitialState: function() {
     return {data: []};
   },
 
