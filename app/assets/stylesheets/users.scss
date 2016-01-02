@@ -1,0 +1,63 @@
+// Place all the styles related to the Users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+$dark-red: #8A3030;
+
+@mixin head-line{
+  h1, h2, h3{
+    color:$dark-red;
+    font-weight:bold;
+    margin-bottom:20px;
+  }
+}
+
+.form-wrapper{
+  margin: 50px 0px 0px 100px;
+  @include head-line;
+  h1{
+    font-size:20px;
+    margin-top:100px;
+  }
+  input{
+    margin: 5px 0;
+  }
+}
+
+.users-wrapper{
+  padding:30px;
+  @include head-line;
+  h1{
+    font-size:23px;
+  }
+  h2{
+    font-size:18px;
+    margin-bottom:15px;
+    margin-top:15px;
+  }
+  .button{
+    display:block;
+    border-radius:5px;
+    background-color:#EDC598;
+    padding:10px;
+    color:black;
+    text-align:center;
+  }
+  .create-button{
+    margin-top:20px;
+    width:30%;
+  }
+}
+
+table{
+  border: 1px dotted $dark-red;
+  width:100%;
+  th, td{
+    padding:5px 10px;
+    border: 1px dotted $dark-red;
+  }
+  th{
+    color: $dark-red;
+    font-weight:bold;
+  }
+}
+

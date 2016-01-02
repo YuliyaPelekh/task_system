@@ -1,0 +1,26 @@
+
+.col-50{
+  width:50%;
+}
+.col-40{
+  width:40%;
+}
+.col-60{
+  width:60%;
+}
+.col-33{
+  width:33%;
+}
+.col-30{
+  width:30%;
+}
+.col-20{
+  width:20%;
+}
+.col-80{
+  width:80%;	
+}
+
+[class*='col-']{
+	display:inline-block;
+}
