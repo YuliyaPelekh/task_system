@@ -2,9 +2,34 @@ $gray: #666564;
 $dark-red: #8A3030;
 $light-gray: #E6E0DC;
 
+@mixin head-line{
+  h1, h2, h3{
+    color:$dark-red;
+    font-weight:bold;
+    margin-bottom:20px;
+  }
+}
+
 main{
   margin-top: 80px;
   margin-bottom:50px;
+}
+
+.main-page-container{
+  @include head-line;
+  margin:30px 0px;
+  padding:50px 100px;
+  font-size: 20px;
+  border-radius:10px;
+  background:#AB7676;
+  color:white;
+  h1{
+    font-size:25px;
+    text-align:center;
+  }
+  p{
+    text-align:justify;
+  }
 }
 
 header{

@@ -31,15 +31,23 @@ var UserShow = React.createClass({
   render: function() {
 
     var tasks = this.state.data.map(function(task) {
+      var date= new Date(task.created_at);
+      var day = date.getDate();
+      if (day < 10) day = '0' + day;
+      var month = date.getMonth() + 1;
+      if (month < 10) month = '0' + month;
+      var year = date.getFullYear() % 100;
+      var x = day + '.' + month + '.' + year;
+
       return ( 
         <tbody>
           <tr key={task.id} >
-            <td>{task.created_at}</td>
+            <td>{x}</td>
             <td>{task.name}</td>
             <td>{task.deadline}</td>
             <td>{task.priority}</td>
             <td>
-                <Link to='edit_task' className='button' params={{taskId: task.id}}>Edit task</Link>
+                <Link to='edit_task' className='button edit-button' params={{taskId: task.id}}>Edit</Link>
              </td>
             <td><DeleteTask id={task.id}/></td>
           </tr>

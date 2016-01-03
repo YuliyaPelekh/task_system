@@ -2,14 +2,16 @@ var LeftMenu = React.createClass({
   render: function() {
     return (
     <div className='left-menu'>
-      <input type="text" placeholder="Search for.."/>
-        <button>
+      <input type="text" id='searchinput' placeholder="Search for.."/>
+        <button id='searchfor'>
           <span className="glyphicon glyphicon-search"></span>
         </button>    
       <nav>
         <ul>
           <li><Link to="/">Home</Link></li>
-          <li><a href="#">Gallery</a></li>
+          <li><Link to="users">All tasks</Link></li>
+          <li><Link to="new_task">Create task</Link></li>
+          <li><Link to="gallery">Gallery</Link></li>
           <li><Link to='/contacts'>Contacts</Link></li>
         </ul>
         <h3>Your Tasks</h3>

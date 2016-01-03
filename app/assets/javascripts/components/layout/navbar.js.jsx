@@ -78,7 +78,7 @@ var Navbar = React.createClass({
                 <li><a href="#">View tasks</a></li>
               </ul>
           </li>
-          <li><a href="#">Gallery</a></li>
+          <li><Link to='gallery'>Gallery</Link></li>
           <li><Link to='/contacts'>Contacts</Link></li>
         </ul>
           {loginMenu}

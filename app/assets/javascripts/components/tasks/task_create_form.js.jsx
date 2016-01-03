@@ -66,7 +66,7 @@ var TaskCreateForm = React.createClass({
        onChange={this.handleDeadlineChange}
        type="text"
        required
-       placeholder='Enter task deadline'/>
+       placeholder='Deadline 01.01.00 00:00'/>
      </p>
 
      <p>

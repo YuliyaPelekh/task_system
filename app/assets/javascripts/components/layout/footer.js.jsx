@@ -12,7 +12,7 @@ var Footer = React.createClass({
           <h3>Contact Us</h3>
           <p>Dragomanova Street,1</p>
           <p>Kyiv, Ukraine</p>
-          <p><a href='mailto:task_management@gmail.com'>task_management@gmail.com</a></p>
+          <p><span className='glyphicon glyphicon-envelope'></span> <a href='mailto:task_management@gmail.com'>task_management@gmail.com</a></p>
         </div>
       </footer>
     );

@@ -31,7 +31,10 @@ var Users = React.createClass({
     var users = this.state.data.map(function(user) {
       return ( 
       <div>
-       <h2>{user.name} {user.email}</h2>   
+        <h2><span className='userName'>{user.name}</span>
+          <span className='glyphicon glyphicon-envelope'></span>
+           <a href='mailto: {user.email}'>{user.email}</a>
+        </h2>   
        <UserShow id={user.id}/>
       </div>  
       );
