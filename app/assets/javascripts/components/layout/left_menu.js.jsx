@@ -14,7 +14,7 @@ var LeftMenu = React.createClass({
           <li><Link to="gallery">Gallery</Link></li>
           <li><Link to='/contacts'>Contacts</Link></li>
         </ul>
-        <h3>Your Tasks</h3>
+        <h3><Link to='mytasks'>My Tasks</Link></h3>
         <ul>
           <li className='submenu-item'><a href="#">Task 1
             <span className="caret"></span></a>

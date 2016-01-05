@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :users
   resources :tasks
   get 'current_user' => 'application#current_user'
+  get 'current_tasks' => 'application#current_tasks'
   get '/login'  => 'sessions#new'
   post '/login' => 'sessions#create'
   delete '/logout' => 'sessions#destroy' 

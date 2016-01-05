@@ -1,15 +1,16 @@
 var DeleteTask = React.createClass({
   mixins: [ReactRouter.Navigation],
 
+
  handleTaskRemoveSubmit: function() {
-    id = this.props.id
+    var id = this.props.data.id;
     $.ajax({
       url: 'tasks/' + id +'.json',
       type: "DELETE",
       dataType: "json",
-      success: function(data) {
+      success: function() {
         this.setState({ data: null });
-        this.transitionTo('new_task')
+        this.transitionTo('new_task');
       }.bind(this),
       error: function(err) {
         console.error(err.toString());
@@ -20,7 +21,7 @@ var DeleteTask = React.createClass({
   render: function() {
     return(
       <form onSubmit={this.handleTaskRemoveSubmit}>
-        <input type='submit' value='Delete'/>
+        <input className='delete-button' type='submit' value='Delete'/>
       </form>
     )
   }

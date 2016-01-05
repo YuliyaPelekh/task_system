@@ -33,10 +33,9 @@ var TaskEditForm = React.createClass({
      <p>
        <input id="task_name" 
        ref="name"
-       value={this.state.name}
+       defaultValue={this.props.data.name}
        onChange={this.handleNameChange}
        type="text"
-       required
        placeholder={this.props.data.name}/>
      </p>
 
@@ -46,7 +45,6 @@ var TaskEditForm = React.createClass({
        value={this.state.deadline}
        onChange={this.handleDeadlineChange}
        type="text"
-       required
        placeholder={this.props.data.deadline}/>
      </p>
 

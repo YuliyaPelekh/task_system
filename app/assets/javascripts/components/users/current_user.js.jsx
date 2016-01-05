@@ -1,4 +1,4 @@
-var UserShow = React.createClass({
+var CurrentUserShow = React.createClass({
    
   getInitialState: function() {
     return {data: []};
@@ -14,9 +14,8 @@ var UserShow = React.createClass({
 
   loadTasksFromServer: function(props) {
     var props = props || this.props || this.nextProps;
-    id = this.props.id;
     $.ajax({
-      url: 'users/' + id + '.json',
+      url: 'current_tasks.json',
       type: 'GET',
       dataType: 'json',
       success: function(result) {
@@ -57,7 +56,8 @@ var UserShow = React.createClass({
     });
 
     return ( 
-      <div>
+      <div className='instant-box'>
+        <h1>My tasks</h1>
         <table> 
           <thead>
             <tr>

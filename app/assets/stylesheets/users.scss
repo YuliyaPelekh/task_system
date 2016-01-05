@@ -23,16 +23,36 @@ $dark-red: #8A3030;
   }
 }
 
-.users-wrapper{
-  padding:30px;
+.instant-box{
   @include head-line;
+  padding:10px 20px;
+  div:first-of-type{
+    margin-bottom: 20px; 
+  }
   h1{
     font-size:23px;
+    margin-left:10px;
+  }
+  input[type="text"]{
+    padding:5px 10px;
+  }
+  .create-button{
+    margin-top:20px;
+    padding:10px;
+    width:15%;
+    background-color:#ED8461;
+    border:1px solid gray;
+    border-radius:10px;
+    color:white;
+    text-align:center;
+    font-weight:bold;
+    box-shadow: 5px 5px 7px gray;
   }
   h2{
     font-size:18px;
     margin-bottom:15px;
     margin-top:15px;
+    margin-left:10px;
     span{
       margin-right:5px;
     }
@@ -42,25 +62,20 @@ $dark-red: #8A3030;
       font-size:16px;
     }
   }
+  .glyphicon-edit, .glyphicon-pencil{
+    color:$dark-red;
+    display:inline-block;
+    margin-left:15px;
+  }
   .button{
-    display:block;
     border-radius:5px;
     color:black;
     text-align:center;
   }
-  .create-button{
-    margin-top:20px;
-    padding:10px;
-    width:30%;
-    background-color:#EDC598;
-    border:1px solid gray;
-  }
-  .edit-button{
-    width:70px;
-    padding:5px;
-    height:40px;
-    border:1px solid gray;
+  .delete-button{
     background:#ED8461;
+    border-radius:5px;
+    display:block;
   }
 }
 
@@ -75,12 +90,28 @@ table{
   th{
     color: $dark-red;
     font-weight:bold;
+    background:#D1C9C7;
   }
   .yellow{
     background:yellow;
   }
-  th:nth-child(1), td:nth-child(1){
+  th, td{
     width:10%;
+  }
+  th:nth-child(2), td:nth-child(2){
+    width:35%;
+  }
+  th:nth-child(3), td:nth-child(3){
+    width:15%;
+  }
+  th:nth-child(5), td:nth-child(5){
+    width:13%;
+  }
+  th:nth-child(6), td:nth-child(6){
+    width:7%;
+  }
+  .completed{
+    background:#F7BAA6;
   }
 }
 

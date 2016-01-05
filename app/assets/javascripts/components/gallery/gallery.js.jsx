@@ -5,7 +5,7 @@ var Gallery = React.createClass({
       <h1>Our team at work</h1>
       <div className="box">
         <div className="innerContent">
-          <img src="/assets/image5.jpg"  alt="Task"/>
+          <img src="/assets/image5.jpeg"  alt="Task"/>
           <div className="titleBox">20/10/2015</div>
         </div>
       </div>

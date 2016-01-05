@@ -13,8 +13,7 @@ var NewTask = React.createClass({
     this.loadUsersFromServer(nextProps);
   },
 
-  loadUsersFromServer: function(props) {
-    props = props || this.props;
+  loadUsersFromServer: function() {
     $.ajax({
       url: 'users.json',
       type: 'GET',

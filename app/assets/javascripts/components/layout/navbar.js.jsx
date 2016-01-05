@@ -16,37 +16,9 @@ var Navbar = React.createClass({
     });
   },
 
-  getInitialState: function() {
-    return {data: []};
-  },
-
-  componentDidMount: function() {
-    this.loadCurrentUserFromServer();
-  },
-
-  componentWillReceiveProps: function(nextProps) {
-    this.loadCurrentUserFromServer(nextProps);
-  },
-
-  loadCurrentUserFromServer: function(props) {
-    props = props || this.props;
-    $.ajax({
-      url: 'current_user.json',
-      type: 'GET',
-      dataType: 'json',
-      success: function(result) {
-        this.setState({data: result});
-      }.bind(this),
-      error: function(xhr, status, err) {
-        console.error('current_user.json', status, err.toString());
-      }.bind(this)
-    });
-  },
-
-
   render: function() {
     var loginMenu;
-    var current_user = this.state.data;
+    var current_user = this.props.data;
     if (current_user == null){ 
       loginMenu =
         <ul> 
@@ -75,7 +47,7 @@ var Navbar = React.createClass({
               <ul className="submenu submenu-toggle">
                 <li><Link to="users">All tasks</Link></li>
                 <li><Link to='new_task'>New task</Link></li>
-                <li><a href="#">View tasks</a></li>
+                <li><Link to="mytasks">My tasks</Link></li>
               </ul>
           </li>
           <li><Link to='gallery'>Gallery</Link></li>

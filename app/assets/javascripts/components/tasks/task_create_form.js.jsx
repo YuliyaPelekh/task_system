@@ -1,7 +1,7 @@
 var TaskCreateForm = React.createClass({
 
   getInitialState: function() {
-    return {user_id: '', name: '', deadline: '', priority: ''};
+    return {user_id: '', name: '', deadline: '', priority: '', percent: '0'};
   },
 
   handleUserIdChange: function(e) {
@@ -24,8 +24,9 @@ var TaskCreateForm = React.createClass({
     var name = this.state.name.trim();
     var deadline = this.state.deadline.trim();
     var priority = this.state.priority.trim();
-    this.props.onTaskSubmit({user_id: user_id, name: name, deadline: deadline, priority: priority});
-    this.setState({user_id: '', name: '', deadline: '', priority: ''});
+    var percent = this.state.percent.trim();
+    this.props.onTaskSubmit({user_id: user_id, name: name, deadline: deadline, priority: priority, percent: percent});
+    this.setState({user_id: '', name: '', deadline: '', priority: '', percent: '0'});
   },
 
   render: function() {
