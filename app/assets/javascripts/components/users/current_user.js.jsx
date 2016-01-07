@@ -29,29 +29,8 @@ var CurrentUserShow = React.createClass({
 
   render: function() {
     var tasks = this.state.data.map(function(task) {
-      var date= new Date(task.created_at);
-      var day = date.getDate();
-      if (day < 10) day = '0' + day;
-      var month = date.getMonth() + 1;
-      if (month < 10) month = '0' + month;
-      var year = date.getFullYear() % 100;
-      var x = day + '.' + month + '.' + year;
-
       return (
-        <tbody>
-          <tr key={task.id} className={task.percent===100?'completed':undefined}>
-            <td>{x}</td>
-            <td>{task.name}</td>
-            <td>{task.deadline}</td>
-            <td>{task.priority}</td>
-            <td>{task.percent}% <Link to='edit_percent' params={{taskId: task.id}}><span className='glyphicon glyphicon-pencil'>
-              </span></Link> </td>
-            <td><Link to='edit_task' params={{taskId: task.id}}>
-               <span className='glyphicon glyphicon-edit'></span></Link>
-            </td>
-            <td><DeleteTask id={task.id}/></td>
-          </tr>
-        </tbody>  
+        <Task data={task}/>
       );     
     });
 

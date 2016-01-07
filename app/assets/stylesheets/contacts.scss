@@ -1,6 +1,13 @@
 
 $dark-red: #8A3030;
 
+
+@media only screen and (max-width : 800px) {
+  h3{
+     font-size:16px;
+   }
+}
+
 #contacts{
   #maps{
   	img{

@@ -39,7 +39,7 @@ var Navbar = React.createClass({
     return (
     <header>
       <nav>
-        <ul>
+        <ul className='main-menu'>
           <li><a href='/' id='title'>Task Management App</a></li>
           <li><Link to='/'>Home</Link></li>
           <li className='submenu-item toggle'><a>Tasks

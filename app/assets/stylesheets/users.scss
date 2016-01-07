@@ -18,8 +18,24 @@ $dark-red: #8A3030;
     font-size:20px;
     margin-top:100px;
   }
-  input{
+  input, select{
     margin: 5px 0;
+  }
+  input[type='submit']{
+    margin-top:20px;
+    background:#ED8461;
+    width:150px;
+    border-radius:10px;
+  }
+  select{
+    width:200px;
+  }
+  label{
+   font-size:14px;
+   font-weight:bold;
+  }
+  #errorMessage{
+    color:red;
   }
 }
 
@@ -39,7 +55,7 @@ $dark-red: #8A3030;
   .create-button{
     margin-top:20px;
     padding:10px;
-    width:15%;
+    width:150px;
     background-color:#ED8461;
     border:1px solid gray;
     border-radius:10px;
@@ -79,6 +95,15 @@ $dark-red: #8A3030;
   }
 }
 
+@media only screen and (max-width : 800px) {
+  .instant-box h1 {
+      font-size:20px;
+  }
+  .instant-box .create-button{
+    display:none;
+   }
+}
+
 table{
   border: 1px dotted $dark-red;
   width:100%;
@@ -104,6 +129,9 @@ table{
   th:nth-child(3), td:nth-child(3){
     width:15%;
   }
+  th:nth-child(4), td:nth-child(4){
+    width:10%;
+  }
   th:nth-child(5), td:nth-child(5){
     width:13%;
   }
@@ -113,5 +141,21 @@ table{
   .completed{
     background:#F7BAA6;
   }
+  .no-display{
+    display:none;
+  }
 }
 
+@media screen and (max-width: 640px) {
+  table {
+    overflow-x: auto;
+    display: block;
+    font-size:12px;
+    line-height:120%;
+  }
+}
+@media screen and (max-width: 800px) {
+  table {
+    width:100%;
+  }
+}

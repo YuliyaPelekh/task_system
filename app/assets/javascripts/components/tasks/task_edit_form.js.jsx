@@ -31,6 +31,7 @@ var TaskEditForm = React.createClass({
     <form onSubmit={this.handleSubmit}>
 
      <p>
+       <label for='task_name'>Description</label><br/>
        <input id="task_name" 
        ref="name"
        defaultValue={this.props.data.name}
@@ -40,10 +41,12 @@ var TaskEditForm = React.createClass({
      </p>
 
      <p>
+      <label for='task_deadline'>Deadline</label><br/>
        <input id='task_deadline'
        ref="deadline"
        value={this.state.deadline}
        onChange={this.handleDeadlineChange}
+       pattern='(\d{2})\.(\d{2})\.(\d{2}) (\d{2}):(\d{2})'
        type="text"
        placeholder={this.props.data.deadline}/>
      </p>

@@ -17,7 +17,20 @@ var TaskCreateForm = React.createClass({
     this.setState({priority: e.target.value});
   },
 
-  
+  validateDeadline: function() {
+    var message, x, re;
+    message = document.getElementById("errorMessage");
+    message.innerHTML = "";
+    x = document.getElementById("task_deadline").value;
+    re = /(\d{2})\.(\d{2})\.(\d{2}) (\d{2}):(\d{2})/;
+    try { 
+      if(re.test(x) == false)  throw "Deadline format is incorrect";
+    }
+    catch(err) {
+      message.innerHTML = err;
+    }
+  },
+
   handleSubmit: function(e) {
     e.preventDefault();
     var user_id = this.state.user_id.trim();
@@ -41,9 +54,10 @@ var TaskCreateForm = React.createClass({
 
    return (
     <form onSubmit={this.handleSubmit}>
-
+      <p id='errorMessage'></p> 
      <select id='task_user'
        ref="user_id"
+       required
        value={this.state.user_id}
        onChange={this.handleUserIdChange}>
           <option disabled>Select user</option>
@@ -51,23 +65,27 @@ var TaskCreateForm = React.createClass({
      </select>
 
      <p>
+      <label for='task_name'>Description</label><br/>
        <input id="task_name" 
        ref="name"
        value={this.state.name}
        onChange={this.handleNameChange}
        type="text"
        required
-       placeholder="Enter task desription"/>
+       pattern='(\w|\s){5,}'
+       placeholder="Minimum 5 characters"/>
      </p>
 
      <p>
+      <label for='task_deadline'>Deadline</label><br/>
        <input id='task_deadline'
        ref="deadline"
        value={this.state.deadline}
+       pattern='(\d{2})\.(\d{2})\.(\d{2}) (\d{2}):(\d{2})'
        onChange={this.handleDeadlineChange}
        type="text"
        required
-       placeholder='Deadline 01.01.00 00:00'/>
+       placeholder='Format 01.01.00 00:00'/>
      </p>
 
      <p>
@@ -82,7 +100,7 @@ var TaskCreateForm = React.createClass({
         </select>
       </p>
   
-    <input type="submit" value="Submit" />
+    <input type="submit" value="Submit" id='submitButton' onClick={this.validateDeadline} />
   </form>
   );
  }

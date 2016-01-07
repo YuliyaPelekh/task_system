@@ -11,7 +11,6 @@ var DefaultRoute = ReactRouter.DefaultRoute;
     <Route path='/users' name='users' handler={Users} />
     <Route path='/mytasks' name='mytasks' handler={CurrentUserShow} />
     <Route path='/gallery' name='gallery' handler={Gallery} />
-    <Route path='/users/:userId' name='user' handler={UserShow} />
     <Route path='/tasks/new' name='new_task' handler={NewTask} />
     <Route path='/tasks/:taskId/edit' name='edit_task' handler={EditTask} />
     <Route path='/tasks/:taskId/edit/percent' name='edit_percent' handler={SelectPercent} />

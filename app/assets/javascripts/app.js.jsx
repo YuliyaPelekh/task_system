@@ -32,10 +32,10 @@ var App = React.createClass({
     return (
     <div>
       <Navbar data={this.state.data}/>
-        <div className='col-20'>
+        <div className='col-20 left'>
  	        <LeftMenu/>
         </div>
- 	      <div className='col-80'>
+ 	      <div className='col-80 right'>
           <main>
             <ReactRouter.RouteHandler/>
           </main>
