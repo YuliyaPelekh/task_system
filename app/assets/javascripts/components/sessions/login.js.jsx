@@ -9,7 +9,7 @@ var Login = React.createClass({
       data: {session: session, user: user},
       success: function(data) {
         this.setState({data: data});
-        this.transitionTo("/");
+        this.transitionTo("users");
       }.bind(this),
       error: function(xhr, status, err) {
         console.error('login.json', status, err.toString());

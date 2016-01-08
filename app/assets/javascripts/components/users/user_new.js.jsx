@@ -9,7 +9,7 @@ var NewUser = React.createClass({
       data: {user: user},
       success: function(data) {
         this.setState({data: data});
-        this.transitionTo("/");
+        this.transitionTo("users");
       }.bind(this),
       error: function(xhr, status, err) {
         console.error('users.json', status, err.toString());

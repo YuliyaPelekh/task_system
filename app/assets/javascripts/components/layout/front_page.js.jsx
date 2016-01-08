@@ -5,7 +5,7 @@ var FrontPage = React.createClass({
       <Carousel />
       <div className = 'main-page-container'>
         <h1>Welcome to Task Management App!</h1>
-          <p>Taks Management App is the best tool for planning your time. 
+          <p>Task Management App is the best tool for planning your time. 
              Hundreds of teams choose our app to capture and organize issues, 
              assign work, and follow team activity. 
              At your desk or on the go with the new mobile interface, 

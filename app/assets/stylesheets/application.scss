@@ -60,6 +60,8 @@ table {
 }
 
 *{
+  -webkit-box-sizing: border-box; 
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -72,7 +74,7 @@ html{
 body {
   background-color:#f1f1f1;
   line-height:200%;
-  font-family: Verdana, Helvetica, sans-serif;
+  font-family: Helvetica, sans-serif;
   position:relative;
   min-height:100%;
   padding-bottom:170px;
@@ -83,3 +85,12 @@ body {
      font-size:14px;
    }
 }
+
+input {
+  height: 40px;    
+}
+
+select{
+  height: 30px;
+}
+
