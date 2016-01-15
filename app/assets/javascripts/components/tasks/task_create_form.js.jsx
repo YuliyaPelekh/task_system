@@ -52,56 +52,56 @@ var TaskCreateForm = React.createClass({
       );
     });
 
-   return (
-    <form onSubmit={this.handleSubmit}>
-      <p id='errorMessage'></p> 
-     <select id='task_user'
-       ref="user_id"
-       required
-       value={this.state.user_id}
-       onChange={this.handleUserIdChange}>
+    return (
+      <form onSubmit={this.handleSubmit}>
+        <p id='errorMessage'></p> 
+        <select id='task_user'
+        ref="user_id"
+        required
+        value={this.state.user_id}
+        onChange={this.handleUserIdChange}>
           <option disabled>Select user</option>
           {options}
-     </select>
+        </select>
 
-     <p>
-      <label for='task_name'>Description</label><br/>
-       <input id="task_name" 
-       ref="name"
-       value={this.state.name}
-       onChange={this.handleNameChange}
-       type="text"
-       required
-       pattern='(\w|\s){5,}'
-       placeholder="Minimum 5 characters"/>
-     </p>
+        <p>
+          <label for='task_name'>Description</label><br/>
+          <textarea id="task_name" 
+          rows="3" cols="20"
+          ref="name"
+          value={this.state.name}
+          onChange={this.handleNameChange}
+          type="text"
+          required
+          pattern='(\w|\s){5,}'
+          placeholder="Minimum 5 characters"></textarea>
+        </p>
 
-     <p>
-      <label for='task_deadline'>Deadline</label><br/>
-       <input id='task_deadline'
-       ref="deadline"
-       value={this.state.deadline}
-       pattern='(\d{2})\.(\d{2})\.(\d{2}) (\d{2}):(\d{2})'
-       onChange={this.handleDeadlineChange}
-       type="text"
-       required
-       placeholder='Format 01.01.00 00:00'/>
-     </p>
+        <p>
+          <label for='task_deadline'>Deadline</label><br/>
+          <input id='task_deadline'
+          ref="deadline"
+          value={this.state.deadline}
+          pattern='(\d{2})\.(\d{2})\.(\d{2}) (\d{2}):(\d{2})'
+          onChange={this.handleDeadlineChange}
+          type="text"
+          required
+          placeholder='Format 01.01.00 00:00'/>
+        </p>
 
-     <p>
-       <select id='task_priority'
-       ref="priority"
-       value={this.state.priority}
-       onChange={this.handlePriorityChange}>
+        <p>
+         <select id='task_priority'
+         ref="priority"
+         value={this.state.priority}
+         onChange={this.handlePriorityChange}>
           <option disabled>Select priority</option>
           <option value='low'>low</option>
           <option value='middle'>middle</option>
           <option value='high'>high</option>
         </select>
       </p>
-  
-    <input type="submit" value="Submit" id='submitButton' onClick={this.validateDeadline} />
-  </form>
-  );
- }
+      <input type="submit" value="Submit" id='submitButton' onClick={this.validateDeadline} />
+    </form>
+   );
+  }
 });

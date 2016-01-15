@@ -1,3 +1,4 @@
+//renders table with tasks of every user
 var UserShow = React.createClass({
    
   getInitialState: function() {

@@ -1,3 +1,4 @@
+//displays all users depending on data received from InstantBox
 var DisplayTable = React.createClass({
 
   render: function() {

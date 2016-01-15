@@ -15,7 +15,6 @@ var TaskEditForm = React.createClass({
     this.setState({priority: e.target.value});
   },
 
-  
   handleSubmit: function(e) {
     e.preventDefault();
     var name = this.state.name.trim();
@@ -26,7 +25,6 @@ var TaskEditForm = React.createClass({
   },
 
   render: function() {
-
    return (
     <form onSubmit={this.handleSubmit}>
 
@@ -37,6 +35,7 @@ var TaskEditForm = React.createClass({
        defaultValue={this.props.data.name}
        onChange={this.handleNameChange}
        type="text"
+       pattern='(\w|\s){5,}'
        placeholder={this.props.data.name}/>
      </p>
 

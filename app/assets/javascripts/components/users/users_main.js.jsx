@@ -1,3 +1,4 @@
+//loads all users data and transfers to Instantbox
 var Users = React.createClass({
    
   getInitialState: function() {

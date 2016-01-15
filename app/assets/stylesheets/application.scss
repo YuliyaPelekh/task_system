@@ -60,8 +60,6 @@ table {
 }
 
 *{
-  -webkit-box-sizing: border-box; 
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -70,7 +68,6 @@ table {
 html{
   height:100%;
 }
-
 
 body {
   background-color:#f1f1f1;
@@ -81,17 +78,13 @@ body {
   padding-bottom:170px;
 }
 
-@media only screen and (max-width : 800px) {
-  main{
-     font-size:14px;
-   }
-}
+/*styles for cross-browser form elements*/
 
 input {
-  height: 40px !important;    
+  height: 40px;    
 }
 
 select{
-  height: 30px !important;
+  height: 30px;
 }
 

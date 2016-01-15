@@ -12,7 +12,8 @@ var NewTask = React.createClass({
   componentWillReceiveProps: function(nextProps) {
     this.loadUsersFromServer(nextProps);
   },
-
+ 
+  // function necessary to get all users in form select
   loadUsersFromServer: function() {
     $.ajax({
       url: 'users.json',

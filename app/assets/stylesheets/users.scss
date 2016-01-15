@@ -27,8 +27,6 @@ $dark-red: #8A3030;
     margin-top:20px;
     background:#ED8461;
     width:150px;
-    -webkit-border-radius:10px;
-    -moz-border-radius:10px;
     border-radius:10px;
   }
   select{
@@ -64,8 +62,6 @@ $dark-red: #8A3030;
     width:150px;
     background-color:#ED8461;
     border:1px solid gray;
-    -webkit-border-radius:10px;
-    -moz-border-radius:10px;
     border-radius:10px;
     color:white;
     text-align:center;
@@ -92,16 +88,12 @@ $dark-red: #8A3030;
     margin-left:15px;
   }
   .button{
-    -webkit-border-radius:5px;
-    -moz-border-radius:5px;
     border-radius:5px;
     color:black;
     text-align:center;
   }
   .delete-button{
     background:#ED8461;
-    -webkit-border-radius:5px;
-    -moz-border-radius:5px;
     border-radius:5px;
     display:block;
   }

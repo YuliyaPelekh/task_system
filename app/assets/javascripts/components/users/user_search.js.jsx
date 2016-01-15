@@ -1,6 +1,7 @@
+/*receives all users data from Users component
+renders users with nested task tables depending on queryresult*/
 var InstantBox = React.createClass({
   doSearch:function(queryText){
-    console.log(queryText)
     var queryResult=[];
     this.props.data.forEach(function(person){
       if(person.name.toLowerCase().indexOf(queryText)!=-1)
@@ -23,27 +24,24 @@ var InstantBox = React.createClass({
     render:function(){
       var finalTable;
       if (this.state.query == ''){
-        finalTable = <DisplayTable data={this.props.data}/>
-       }
+        finalTable = <DisplayTable data={this.props.data}/> //all users
+      }
       else {
-        finalTable = <DisplayTable data={this.state.filteredData}/>
+        finalTable = <DisplayTable data={this.state.filteredData}/> //filtered users
       }
 
       return (
-         <div className="instant-box">
-           <div>
-              <h1 className='col-20'>All users tasks</h1>
-              <div className='col-60'>
-                <SearchBox query={this.state.query} doSearch={this.doSearch}/>
-              </div>
+        <div className="instant-box">
+          <div>
+            <h1 className='col-20'>All users tasks</h1>
+            <div className='col-60'>
+              <SearchBox query={this.state.query} doSearch={this.doSearch}/>
+            </div>
               <Link to='new_task' className='create-button col-20'>
                Create new task </Link>
-            </div>
-                {finalTable}
-           </div>
-        );
+          </div>
+            {finalTable}
+        </div>
+      );
     }
 });
-
-
-

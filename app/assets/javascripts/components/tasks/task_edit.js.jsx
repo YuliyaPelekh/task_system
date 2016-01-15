@@ -39,12 +39,12 @@ var EditTask = React.createClass({
 
    render: function() {
      return (
-   <div className='form-wrapper'>
-      <h1>Edit Task</h1>
-      <TaskEditForm
-        onTaskSubmit={this.handleSubmit} data={this.state.data}/>
+      <div className='form-wrapper'>
+        <h1>Edit Task</h1>
+        <TaskEditForm
+         onTaskSubmit={this.handleSubmit} data={this.state.data}/>
         <Link to='users'>{'Back to users'}</Link>
-    </div>
-   );
+      </div>
+    );
   }
 });

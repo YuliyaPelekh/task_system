@@ -1,3 +1,4 @@
+//form for registration of new users
 var UserForm = React.createClass({
   getInitialState: function() {
     return {name: '', email: '', password: ''};

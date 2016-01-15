@@ -1,3 +1,4 @@
+//renders every task
 var Task = React.createClass({
   mixins: [ReactRouter.Navigation],
 
@@ -8,7 +9,8 @@ var Task = React.createClass({
       type: "DELETE",
       dataType: "json",
       success: function(data) {
-        this.transitionTo('new_task');
+        alert('Task deleted!');
+        $('#' + id).css('display', 'none');
       }.bind(this),
       error: function(err) {
         console.error(err.toString());
@@ -28,7 +30,7 @@ var Task = React.createClass({
 
       return (
         <tbody>
-          <tr key={task.id} className={task.percent===100?'completed':undefined}>
+          <tr id={task.id} key={task.id} className={task.percent===100?'completed':undefined}>
             <td>{x}</td>
             <td>{task.name}</td>
             <td>{task.deadline}</td>

@@ -1,4 +1,4 @@
-// // main React component
+// main React component
 var App = React.createClass({
   
   getInitialState: function() {

@@ -1,3 +1,4 @@
+//renders form for editing task percents
 var SelectPercent = React.createClass({
   mixins: [ReactRouter.Navigation],
 
@@ -38,7 +39,6 @@ var SelectPercent = React.createClass({
   },
 
   render: function() {
-
     return (
      <div className='form-wrapper'>
       <h1>Add percent of execution</h1>

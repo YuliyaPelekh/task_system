@@ -24,6 +24,7 @@ main{
 @media only screen and (max-width : 800px) {
   main{
      margin-bottom:150px;
+     font-size:14px;
    }
 }
 
@@ -33,14 +34,11 @@ main{
    }
 }
 
-
 .main-page-container{
   @include head-line;
   margin:30px 0px;
   padding:50px 100px;
   font-size: 20px;
-  -webkit-border-radius:10px;
-  -moz-border-radius:10px;
   border-radius:10px;
   background:#AB7676;
   color:white;
@@ -70,10 +68,10 @@ main{
 
 
 header{
-   position:fixed;
-   top:0px;
-   width:100%;
-   z-index:20;
+  position:fixed;
+  top:0px;
+  width:100%;
+  z-index:20;
   nav{ 
     min-height:60px;
     background:$dark-red;

@@ -1,3 +1,4 @@
+//renders tasks of current user
 var CurrentUserShow = React.createClass({
    
   getInitialState: function() {
